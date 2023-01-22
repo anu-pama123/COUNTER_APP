@@ -1,0 +1,61 @@
+.App {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.title-section {
+  background-color: rgb(23, 38, 64);
+  color: white;
+  height: 20%;
+  width: 100%;
+  display: flex;
+}
+
+.title {
+  margin: auto;
+
+}
+
+.counter {
+  display: flex;
+  flex-direction: column;
+  height: 80%;
+  width: 100%;
+}
+
+.counter-section {
+  margin: auto;
+  background-color:rgb(111, 141, 141);
+  padding: 10%;
+  height: 50%;
+  width: 40%;
+}
+
+.counter-display {
+  height: 30%;
+  display: flex;
+  border-style: ridge;
+}
+
+.counter-value {
+  margin: auto;
+  font-size: 30px;
+}
+
+.counter-operation {
+  display: flex;
+  flex-direction: column;
+  height: 80%;
+}
+
+.increment-button-container, .decrement-button-container,.add-by-button-container {
+  padding-top: 10%;
+  height: 100%;
+}
+
+.increment-button, .decrement-button, .add-by-button {
+  height: 5vh;
+  width: 100%;
+  font-size: 20px;
+}
