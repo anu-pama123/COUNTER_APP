@@ -18,6 +18,25 @@ const Counter = () => {
         }
     }
 
+    // const colors = ['red','blue', 'green', 'black']
+
+    const randomColorGenerator = ()=>{
+        var result           = '#';
+        var characters       = '0123456789ABCDEF';
+        for ( var i = 0; i < 6; i++ ) {
+            result += characters.charAt(Math.floor(Math.random() * 16));
+        }
+        return result;
+        // let result = 'yellow'
+        // for ( var i = 0; i < colors.length; i++ ) {
+        //     result = colors[i];
+        // }
+        // console.log(result)
+        // return result;
+    }
+
+    const [color, setColor] = useState(randomColorGenerator())
+
     return (
         <div className="counter-container">
             <div className='title-section'>
@@ -30,7 +49,7 @@ const Counter = () => {
                 </div>
                 <div className='counter-operation'>
                     <div className='increment-button-container'>
-                        <button className='increment-button' onClick={()=>setounterValue('INC')}>Increment</button>
+                        <button style={{backgroundColor: `${color}`}} className='increment-button' onClick={()=>{setounterValue('INC');setColor(randomColorGenerator)}}>Increment</button>
                     </div>
                     <div className='decrement-button-container'>
                         <button className='decrement-button' onClick={() => setounterValue('DEC')}>Decrement</button>

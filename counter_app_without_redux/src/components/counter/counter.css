@@ -1,3 +1,7 @@
+.counter-container {
+    height: 100vh;
+}
+
 .title-section {
     background-color: rgb(23, 38, 64);
     color: white;
