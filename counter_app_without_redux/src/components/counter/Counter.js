@@ -1,10 +1,16 @@
 import React from "react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 import "../../components/counter/counter.css";
 
 const Counter = () => {
     const [counterValue, setCounterValue] = useState(0);
+    const [value, setValue] = useState(0);
+    useEffect(() => {
+        setTimeout(() => {
+            setValue(value+1)
+        },1000)
+    },[value])
 
     const setounterValue = (action) => {
         if(action === 'INC') {
@@ -43,6 +49,7 @@ const Counter = () => {
                 <h1 className='title'>COUNTER APP</h1>
             </div>
             <div className='counter'>
+                <div>I have rendered {value}</div>
                 <div className='counter-section'>
                 <div className='counter-display'>
                     <h2 className='counter-value'>{counterValue}</h2>
